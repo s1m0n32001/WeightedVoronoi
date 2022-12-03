@@ -27,7 +27,11 @@ We can follow this procedure to start from a set of generators and get to a Cent
     - Compute centroids $C_i$
     - Move each generator to its centroid
     
-The initial generators are technically not important, but we can help the algorithm by starting from a reasonable configuration, e.g. from a Dithering algorithm.
+T
+#### Initial configuration
+The initial configuration is technically not important for the convergence of the algorithm; it is nonetheless useful to start with a reasonable configuration; one could, for example, use Floyd-Steinberg Dithering. 
+
+What we did, however, was starting by extracting $N$ random pixels with probabiliy given by the gray values. 
 
 #### Computation of the edges and centroid
 Practically speaking, we want to compute the centroids starting from the picture of a painting. In order to do that, we can do the following:
