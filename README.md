@@ -27,7 +27,7 @@ We can follow this procedure to start from a set of generators and get to a Cent
     - Compute centroids $C_i$
     - Move each generator to its centroid
     
-T
+
 #### Initial configuration
 The initial configuration is technically not important for the convergence of the algorithm; it is nonetheless useful to start with a reasonable configuration; one could, for example, use Floyd-Steinberg Dithering. 
 
