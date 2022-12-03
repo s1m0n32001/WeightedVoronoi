@@ -4,7 +4,7 @@
 Weighted Voronoi Stippling (Secord, 2002) is a technique used to find a collection of points ("generators") from an image, in a similar fashion to what the art movement of Pointillism did. This is particularly useful in the context of TSP-Art (https://www2.oberlin.edu/math/faculty/bosch/tspart-page.html).
 
 ![Explanation](/explanation.png "Secord, 2002")
-*Image from Secord's algorithm*
+Image from Secord's algorithm*
 
 This jupyter-notebook implements Secords's algorithm for Weighted Voronoi Stippling.
 
@@ -41,10 +41,9 @@ If the cell extends in the vertical range $[y_1,y_2]$, we can separate the integ
 The calculation of the $y$ coordinate of a centroid can be tackled similarly. We have
 $\int_{y_1}^{y_2}y\int_{x_1(y)}^{x_2(y)}\rho(x,y)dxdy = \int_{y_1}^{y_2}y P(x,y)|_{x_1(y)}^{x_2(y)}dy$
 
-Finally, the calculation of the $x$ coordinate for the centroid can be performed via integration by parts. We have:
-$\int_{y_1}^{y_2}\int_{x_1(y)}^{x_2(y)}x\rho(x,y)dxdy=\int_{y_1}^{y_2}dy [xP(x,y)|^{x_2(y)}_{x_1(y)}-\int_{x_1(y)}^{x_2(y)}P(x,y)dx]:=\int_{y_1}^{y_2}[xP-Q]^{x_2(y)}_{x_1(y)}dx$ with $Q=\int_{0}^{x}P(s,y)ds$
+Finally, the calculation of the $x$ coordinate for the centroid can be performed via integration by parts. We have $\int_{y_1}^{y_2}\int_{x_1(y)}^{x_2(y)}x\rho(x,y)dxdy=\int_{y_1}^{y_2}dy [xP(x,y)|^{x_2(y)}{x_1(y)}-\int{x_1(y)}^{x_2(y)}P(x,y)dx]:=\int_{y_1}^{y_2}[xP-Q]^{x_2(y)}{x_1(y)}dx$ with $Q=\int_{0}^{x}P(s,y)ds$
 
-In other words, we have to compute the values of $P$ and $Q$ across all the pixels and then carry on the sum
+In other words, we have to compute the values of $P$ and $Q$ across all the pixels and then carry on the sum.
 
 
 ### Bibliography
